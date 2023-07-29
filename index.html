@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/syyle.css" />
+    <title>CURD SYS</title>
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="mb-4">
+        <label for="nameInbut" class="mb-1">Product Name</label>
+        <input type="text" class="form-control" id="nameInbut" />
+      </div>
+      <div class="mb-4">
+        <label for="priceInbut" class="mb-1">Product Price</label>
+        <input type="number" class="form-control" id="priceInbut" />
+      </div>
+      <div class="mb-4">
+        <label for="CategoryInbut" class="mb-1">Product Category</label>
+        <select id="CategoryInbut" class="form-select">
+          <option value="tv">TV</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Labtop">Labtop</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="descInbut" class="mb-1">Product Description</label>
+        <textarea
+          id="descInbut"
+          class="form-control"
+          rows="2"
+          style="resize: none"
+        ></textarea>
+      </div>
+      <div>
+        <button id="addptn" class="btn btn-outline-info" onclick="addProduct ()" style="display: inline-block;">Add Product</button>
+        <button id="editbtn" class="btn btn-outline-primary" onclick="updataProduct ()" style="display: none;">Add edit</button>
+        <button class="btn btn-outline-secondary" onclick="clearForm ()">Clear Form</button>
+      </div>
+      
+      <input
+        type="text"
+        placeholder="search Name or Category"
+        class="form-control w-50 m-4 mx-auto"
+        id="searchInput"
+        onkeyup="searchproduct ()"
+      />
+    </div>
+    <div class="container">
+      <table
+        class="table table-dark table-striped table-bordered table-hover text-center"
+      >
+        <thead>
+          <th>Index</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Category</th>
+          <th>Product Description</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="myData">
+       
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
